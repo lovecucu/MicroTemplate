@@ -97,6 +97,12 @@ class MicroTemplate
 		}
 	}
 
+	/**
+	 * [assign 分配变量到模板文件]
+	 * @param  [type] $tpl_var [description]
+	 * @param  [type] $value   [description]
+	 * @return [type]          [description]
+	 */
 	public function assign($tpl_var, $value=NULL)
 	{
 		if (is_array($tpl_var))
@@ -115,6 +121,11 @@ class MicroTemplate
         }
 	}
 
+	/**
+	 * [display 显示页面]
+	 * @param  [type] $file [description]
+	 * @return [type]       [description]
+	 */
 	public function display($file)
 	{
 		error_reporting(E_ALL & ~E_NOTICE & ~E_WARNING);
@@ -182,6 +193,10 @@ class MicroTemplate
 		echo $data;exit;
 	}
 
+	/**
+	 * [_compile 生成编译文件]
+	 * @return [type] [description]
+	 */
 	private function _compile()
 	{
 		$flag = true;
@@ -206,7 +221,3 @@ class MicroTemplate
 		return $flag;
 	}
 }
-
-$template = new MicroTemplate();
-$template->assign(array('names'=>array('aaaa', 'bbbb', 'cccc', 'dddd'),'name' => 'testjjj'));
-$template->display('index');
