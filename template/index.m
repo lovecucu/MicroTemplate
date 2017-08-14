@@ -5,15 +5,12 @@
 	</head>
 
 	<body>
-
 		{foreach $names as $k=>$aa}
 			<p>{$aa}</p>
 		{/foreach}
 
 		{if $name == 'test'}
-
 			<p>{$name}</p>
-
 		{else if $name =='test2'}
 			<p>{$name}</p>
 		{else}

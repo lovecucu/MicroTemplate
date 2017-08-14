@@ -46,7 +46,7 @@ class MicroTemplate
 	);
 
 	private $_array_patterns = array(
-		'/\s*\\n\s*/', // 匹配换行
+		'/\s*\\r?\\n\s*/', // 匹配换行
 		'/\{\s*(\$\w+?)\s*\}/', // 匹配变量
 		'/\{\s*(else\s?if)\s+(.*?)\s*\}/',  // 匹配elseif
 		'/\{\s*(if)\s+(.*?)\s*\}/',  // 匹配if
