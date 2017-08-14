@@ -5,7 +5,7 @@
 	</head>
 
 	<body>
-		{foreach $names as $k=>$aa}
+		{foreach $names as $v=>$aa}
 			<p>{$aa}</p>
 		{/foreach}
 

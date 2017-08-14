@@ -194,6 +194,47 @@ class MicroTemplate
 	}
 
 	/**
+	 * [clear_cache 删除指定缓存]
+	 * @param  [type] $file [description]
+	 * @return [type]       [description]
+	 */
+	public function clear_cache($file)
+	{
+		$cache_file = $this->_array_config['cache_dir'].DIRECTORY_SEPARATOR.md5($file).$this->_array_config['suffix_cache'];
+
+		if(file_exists($cache_file))
+		{
+			unlink($cache_file);
+		}
+
+		return TRUE;
+	}
+
+	/**
+	 * [clear_all_caches 清空缓存目录]
+	 * @return [type] [description]
+	 */
+	public function clear_all_caches()
+	{
+		$cache_dir = $this->_array_config['cache_dir'].DIRECTORY_SEPARATOR;
+		if(is_dir($cache_dir))
+		{
+			$dh = opendir($cache_dir);
+			while( ($file = readdir($dh)) !== FALSE )
+			{
+				if($file == '.' || $file == '..')
+				{
+					continue;
+				}
+
+				unlink($cache_dir.$file);
+			} 
+			closedir($dh);
+		}
+		return TRUE;
+	}
+
+	/**
 	 * [_compile 生成编译文件]
 	 * @return [type] [description]
 	 */
