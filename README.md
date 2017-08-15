@@ -7,7 +7,7 @@
 
 1. MicroTemplate是什么
 
-    平时在项目中，我们或多或少会乃至模板引擎，其中最常见的诸如smarty,twig,还有一些框架自带的模板引擎。
+    平时在项目中，我们或多或少会使用模板引擎，其中最常见的诸如smarty,twig,还有一些框架自带的模板引擎。
     
     那么这些模板引擎究竟是如何实现的呢？它们的内部工作原理是什么？
     
@@ -258,7 +258,7 @@
     }
 
     ```
-    以上即是MicroTemplate功能的详细介绍，MicroTemplate完整代码见本人github：[lovecucu/MicroTemplate](https://github.com/lovecucu/MicroTemplate.git)
+    以上是对MicroTemplate模板引擎功能的简要介绍.
     
 3. PHP模板引擎的思考
 
