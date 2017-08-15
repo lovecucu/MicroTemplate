@@ -1,5 +1,3 @@
-### 标签：PHP
-
 #### 目录
 1. MicroTemplate是什么
 2. MicroTemplate功能详解
